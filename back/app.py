@@ -17,8 +17,6 @@ class HopfieldNetwork:
 
     def add_pattern(self, pattern):
         pattern = np.array(pattern, dtype=np.int8)
-        print('add_pattern', pattern)
-        print('pattern:shape', pattern.shape)
         self.weights += np.outer(pattern, pattern).astype(np.int8) - np.identity(self.size,
                                                                                  dtype=np.int8)
 
